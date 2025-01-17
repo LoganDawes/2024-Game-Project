@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Wall
+  - Ground
+  - Door
+  - Staircase
+  - Enemy
+  - Key
+  - Barrel
+  - Anchor
+  - Sign
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Player
+  - Wall
+  - Interactible
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 800602309
+    locked: 0
+  - name: Wall
+    uniqueID: 2276395391
+    locked: 0
+  - name: Interactible
+    uniqueID: 2739956829
+    locked: 0
+  - name: Player
+    uniqueID: 1991366509
+    locked: 0
+  - name: Fog
+    uniqueID: 2076580025
+    locked: 0
