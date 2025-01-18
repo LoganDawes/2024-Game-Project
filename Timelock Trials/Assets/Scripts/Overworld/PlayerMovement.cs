@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         // Collisison with Wall
         if (collision.collider.CompareTag("Wall"))
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         // Collisison with Wall
         if (collision.collider.CompareTag("Wall"))
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 }

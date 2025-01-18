@@ -61,7 +61,7 @@ public class EnemyAI : MonoBehaviour
         else if (isChasing)
         {
             isChasing = false;
-            rb.velocity = Vector2.zero;         // Stop current velocity
+            rb.linearVelocity = Vector2.zero;         // Stop current velocity
             roamCoroutine = StartCoroutine(RoamWithDelay());    // Resume roaming behavior
         }
     }
@@ -82,7 +82,7 @@ public class EnemyAI : MonoBehaviour
         while (Vector2.Distance(transform.position, roamTarget) > 0.2f)
         {
             Vector2 direction = (roamTarget - (Vector2)transform.position).normalized;
-            rb.velocity = direction * roamSpeed * Time.fixedDeltaTime;
+            rb.linearVelocity = direction * roamSpeed * Time.fixedDeltaTime;
             yield return null; // Wait for the next frame
         }
 
@@ -105,7 +105,7 @@ public class EnemyAI : MonoBehaviour
         StopCoroutine(roamCoroutine);
         // Move towards the player
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.velocity = direction * chaseSpeed * Time.fixedDeltaTime;
+        rb.linearVelocity = direction * chaseSpeed * Time.fixedDeltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -145,7 +145,7 @@ public class EnemyAI : MonoBehaviour
 
         // Disable chase behavior
         isChasing = false;
-        rb.velocity = Vector2.zero; // Stop movement
+        rb.linearVelocity = Vector2.zero; // Stop movement
         StopCoroutine(roamCoroutine); // Stop any ongoing coroutines
 
         // Temporarily disable collision by turning off the Collider2D
